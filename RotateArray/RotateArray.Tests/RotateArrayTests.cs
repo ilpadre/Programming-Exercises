@@ -60,6 +60,16 @@ namespace RotateArray.Tests
             Assert.IsTrue(isEqual);
         }
 
+        [Test]
+        public void RotateArrayWith8ItemsSixteenTimes()
+        {
+            int[] inputArr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            int[] expected = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            int[] actual = RotateArrayLib.RotateN(inputArr, 16);
+            bool isEqual = arraysAreEqual(actual, expected);
+            Assert.IsTrue(isEqual);
+        }
+
         private bool arraysAreEqual(int[] actual, int[] expected)
         {
             bool areEqual = true;
