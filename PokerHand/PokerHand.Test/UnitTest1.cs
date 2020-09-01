@@ -122,11 +122,69 @@ namespace PokerHand.Test
         }
 
         [Test]
-        public void DetectStraight()
+        public void DetectStraight1()
         {
             PokerHand testHand = new PokerHand("2S 3H 4C 5D 6H");
             Assert.AreEqual(HandType.Straight, testHand.GetHandType());
         }
+
+        [Test]
+        public void DetectStraight2()
+        {
+            PokerHand testHand = new PokerHand("7S 3H 4C 5D 6H");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight3()
+        {
+            PokerHand testHand = new PokerHand("7S 8H 4C 5D 6H");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight4()
+        {
+            PokerHand testHand = new PokerHand("7S 8H 9C 5D 6H");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight5()
+        {
+            PokerHand testHand = new PokerHand("7S 8H 9C TD 6H");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight6()
+        {
+            PokerHand testHand = new PokerHand("7S 8H 9C TD JH");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight7()
+        {
+            PokerHand testHand = new PokerHand("QS 8H 9C TD JH");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight8()
+        {
+            PokerHand testHand = new PokerHand("QS KH 9C TD JH");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+        [Test]
+        public void DetectStraight9()
+        {
+            PokerHand testHand = new PokerHand("QS KH AC TD JH");
+            Assert.AreEqual(HandType.Straight, testHand.GetHandType());
+        }
+
+
 
         [Test]
         public void DetectStraightAceHigh()
