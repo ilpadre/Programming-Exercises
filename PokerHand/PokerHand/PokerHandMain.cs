@@ -17,7 +17,7 @@ namespace PokerHand
         private static Dictionary<HandType, int> aggregateHands = new Dictionary<HandType, int>();
         static void Main(string[] args)
         {
-            CreateDeck();
+            CreateDeck(); 
 
             // Generate 100 hands and print them out for analysis
             Console.WriteLine("Generate 100 hands and print them out for analysis");
