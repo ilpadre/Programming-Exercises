@@ -133,15 +133,6 @@ namespace MontyHall
             threeDoors = GenerateRandomPrizes();
         }
 
-        public void ContestantPicksADoor()
-        {
-            int firstChoice = RandomNumber(3);
-            ChosenDoor = GetDoorFromNum(++firstChoice);
-        }
-
-        public void PlayGame()
-        {
-        }
 
         // Generates a random number within a range.      
         public int RandomNumber(int max)
@@ -183,21 +174,19 @@ namespace MontyHall
 
         public void MontyLeavesDoorShut()
         {
-            if ((ChosenDoor.Id == 1 && MontyDoor.Id == 2)
-                || (ChosenDoor.Id == 2 && MontyDoor.Id == 1))
+            HashSet<int> doors = new HashSet<int>();
+            doors.Add(ChosenDoor.Id);
+            doors.Add(MontyDoor.Id);
+            int closedDoorId = 0;
+            for (int i = 1; i <= 3; i++)
             {
-                ClosedDoor = threeDoors.Door3;
+                if (!doors.Contains(i))
+                {
+                    closedDoorId = i;
+                    break;
+                }
             }
-            else if ((ChosenDoor.Id == 1 && MontyDoor.Id == 3)
-                || (ChosenDoor.Id == 3 && MontyDoor.Id == 1))
-            {
-                ClosedDoor = threeDoors.Door2;
-            }
-            else 
-            {
-                ClosedDoor = threeDoors.Door1;
-            }
-
+            ClosedDoor = GetDoorFromNum(closedDoorId);
         }
 
         public void PrintDoorsAndPrizes()
@@ -212,66 +201,14 @@ namespace MontyHall
 
         private Door ReturnTheGoat(List<Door> doors)
         {
-            // Second implementation
-            int doorToTryFirst = RandomNumber(2);
-            if (doorToTryFirst == 0)
+            if (doors[0].Occupant == OccupantType.Goat)
             {
-                if (doors[doorToTryFirst].Occupant == OccupantType.Goat)
-                {
-                    return doors[doorToTryFirst];
-                }
-                else if (doors[++doorToTryFirst].Occupant == OccupantType.Goat)
-                {
-                    return doors[doorToTryFirst];
-                }
-
+                return doors[0];
             }
             else
             {
-                if (doors[doorToTryFirst].Occupant == OccupantType.Goat)
-                {
-                    return doors[doorToTryFirst];
-                }
-                else if (doors[--doorToTryFirst].Occupant == OccupantType.Goat)
-                {
-                    return doors[doorToTryFirst];
-                }
+                return doors[1];
             }
-
-            return null;
-
-
-            // Original implementation that results in 44% win rate
-            // if (doors[0].Occupant == OccupantType.Goat)
-            // {
-            //     return doors[0];
-            // }
-            // else
-            // {
-            //     return doors[1];
-            // }
-        }
-
-        private List<Door> GetRemainingDoors(Door d)
-        {
-            List<Door> doors = new List<Door>();
-            if (d == threeDoors.Door1)
-            {
-                doors.Add(threeDoors.Door2);
-                doors.Add(threeDoors.Door3);
-            }
-            else if (d == threeDoors.Door2)
-            {
-                doors.Add(threeDoors.Door1);
-                doors.Add(threeDoors.Door3);
-            }
-            else if (d == threeDoors.Door3)
-            {
-                doors.Add(threeDoors.Door1);
-                doors.Add(threeDoors.Door2);
-            }
-
-            return doors;
         }
 
         private Door GetDoorFromNum(int doorNum)
@@ -300,8 +237,6 @@ namespace MontyHall
         {
             return RandomNumber(3);
         }
-
-
 
         private List<int> GetRandomNumbers()
         {

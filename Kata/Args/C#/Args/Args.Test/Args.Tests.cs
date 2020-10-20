@@ -10,9 +10,12 @@ namespace Args.Test
         }
 
         [Test]
-        public void Test1()
+        public void GetValForOneBool()
         {
-            Assert.Pass();
+            string[] args = {"l", "true"};
+            Args.Parse("l", args);
+            var val = Args.GetValForArg('l');
+            Assert.AreEqual("true", val, "Incorrect value returned");
         }
     }
 }
