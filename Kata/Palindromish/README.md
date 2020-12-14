@@ -1,4 +1,4 @@
-# Palindromish-20201216
+# Palindromish
 
 ## Write a program to find all 9-letter words where the middle three letters are 'E' 'L' 'I', and the last three letters are the same as the first three letters but in reverse.
 
