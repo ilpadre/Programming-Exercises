@@ -20,7 +20,7 @@ namespace Palindromish
             string pattern = "fred";
             List<String> matchingWordsForFred = originalWords.Where(w => IsMatchEnancement2(w, pattern)).ToList();
 
-            pattern = "api";
+            pattern = "fart";
             List<String> matchingWordsForApi = originalWords.Where(w => IsMatchEnancement2(w, pattern)).ToList();
 
 
