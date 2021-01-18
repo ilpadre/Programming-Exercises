@@ -1,0 +1,25 @@
+Athlete Name,Team Name,Elapsed Time
+Noah Perry,Central High,17:35
+Jake Sandefur,Hamilton Academy,17:43
+Sam Gibbs,Springfield,17:44
+David Sander,Springfield,17:59
+Lucas Webster,Central High,18:19
+Jack Hatton, GrayCounty,18:24
+Logan Walters,Central High,18:40
+Bradley Davis,Central High,18:54
+Cameron Brockman,Springfield,19:03
+James Springer,Gray County,19:08
+Dylan Hasler,Central High,19:10
+Shawn Berger,Hamilton Academy,19:23
+Austin Schwartz,Springfield,19:31
+Tyler Bergman,Springfield,19:34
+Brandon Schultz,Central High,19:35
+Evan Holtz,Gray County,19:36
+Josh Obermeyer,Springfield,19:44
+Alex Morris,Central High,19:50
+William Cook,Gray County,19:56
+Justin Holloway,Springfield,19:57
+Hunter Kohlsmith,Gray County,19:58
+Anthony Rone,Gray County,20:05
+Ethan Conrad,Central High,20:09
+Matthew McCain,Gray County,20:26
