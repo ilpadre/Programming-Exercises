@@ -6,4 +6,10 @@
     <RootNamespace>XC_Team_Scoring</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="results.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
