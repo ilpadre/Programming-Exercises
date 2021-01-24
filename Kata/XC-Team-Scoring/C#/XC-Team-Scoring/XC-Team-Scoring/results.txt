@@ -1,4 +1,3 @@
-Athlete Name,Team Name,Elapsed Time
 Noah Perry,Central High,17:35
 Jake Sandefur,Hamilton Academy,17:43
 Sam Gibbs,Springfield,17:44
