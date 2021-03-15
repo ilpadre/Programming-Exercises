@@ -11,10 +11,20 @@ namespace Redistrict
         {
             string precincts = "precincts.txt"; 
             GenerateTestFile(precincts);
+            var sortedNumbersEntireFile = ProcessEntireFile(precincts);
+            PrintArray(sortedNumbersEntireFile);
             ProcessFilesMultiPass();
             ProcessFilesFileMerge();
             ProcessFilesBitmap();
             Console.WriteLine("Hello World!");
+        }
+
+        private static void PrintArray(int[] sortedNumbers)
+        {
+            foreach (int num in sortedNumbers)
+            {
+                Console.WriteLine(num);
+            }
         }
 
         private static void GenerateTestFile(string fileName)
@@ -27,7 +37,27 @@ namespace Redistrict
                 intsAsStrings.AppendLine(arrayElement.ToString());
             }
 
-            File.AppendAllText(fileName, intsAsStrings.ToString());
+            File.WriteAllText(fileName, intsAsStrings.ToString());
+            string dir = Directory.GetCurrentDirectory();
+            string wdir = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine(dir);
+        }
+
+        private static int[] ProcessEntireFile(string fileName)
+        {
+            int[] precincts = new int[27000];
+            int i = 0;
+            string num = string.Empty;
+            using (TextReader reader = File.OpenText("precincts.txt"))
+            {
+                while (reader.Peek() != -1)
+                {
+                    precincts[i++] = int.Parse(reader.ReadLine());
+                }
+
+            }
+            Array.Sort(precincts);
+            return precincts;
         }
 
         public static List<int> GenerateRandomIntegersInARange(int count)
@@ -45,7 +75,7 @@ namespace Redistrict
                     cnt++;
                     number = random.Next(1, count+1);
                 }
-                while (number > 0 && number < 27000 && randomNumbers.Contains(number));
+                while (number > 0 && number <= 27000 && randomNumbers.Contains(number));
 
                 randomNumbers.Add(number);
             }
