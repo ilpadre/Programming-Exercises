@@ -50,7 +50,31 @@ namespace DataMunging
         private static string MinGoalDifferential()
         {
             var team = "";
+            using var scores = new StreamReader("football.dat.csv");
+            if (!scores.EndOfStream)
+            {
+                // skip header line
+                scores.ReadLine();
+            }
 
+            var goalsFor = 0;
+            var goalsAgainst = 200;
+            var goalDifferential = 200;
+
+            while (!scores.EndOfStream)
+            {
+                var line = scores.ReadLine();
+                var teamData = line.Split(',');
+                var thisFor = Convert.ToInt32(teamData[6]);
+                var thisAgainst = Convert.ToInt32(teamData[7]);
+                if (goalDifferential > Math.Abs(thisFor - thisAgainst))
+                {
+                    goalDifferential = Math.Abs(thisFor - thisAgainst);
+                    team = teamData[1];
+                }
+            }
+
+            scores.Close();
             return team;
         }
     }
