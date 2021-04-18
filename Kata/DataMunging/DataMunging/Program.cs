@@ -7,11 +7,16 @@ namespace DataMunging
     internal class Program
     {
         private static void Main(string[] args)
-        {
-            MinTemperatureRange();
+        { 
+            var day = MinTemperatureRange();
+            Console.WriteLine($"The day with the smallest temperature difference was June {day}");
+            var team = MinGoalDifferential();
+            Console.WriteLine($"The team with the smallest goal differential was {team} ");
         }
 
-        private static void MinTemperatureRange()
+
+
+        private static int MinTemperatureRange()
         {
             using var temperatures = new StreamReader("weather.dat.csv");
             if (!temperatures.EndOfStream)
@@ -36,10 +41,17 @@ namespace DataMunging
                     day = Convert.ToInt32(items[0]);
                 }
             }
-            Console.WriteLine($"{day}");
 
             temperatures.Close();
 
+            return day;
+        }
+
+        private static string MinGoalDifferential()
+        {
+            var team = "";
+
+            return team;
         }
     }
 }
