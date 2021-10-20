@@ -26,7 +26,7 @@ namespace RockPaperScissors
 
     public class RPS
     {
-        //public static string[] Plays = {"Rock", "Paper", "Scissors"};
+        public static string[] Plays = {"Rock", "Paper", "Scissors"};
 
         public static Dictionary<string, int> playStats = new Dictionary<string, int>();
 
