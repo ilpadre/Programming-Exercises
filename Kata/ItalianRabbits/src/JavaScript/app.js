@@ -17,7 +17,6 @@ const breedRabbits = (month) => {
 
         }
         let t = rabbits.concat(newborns)
-        rabbits = []
         rabbits = t
     }
     return rabbits.length
