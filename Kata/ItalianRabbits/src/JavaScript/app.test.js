@@ -1,6 +1,22 @@
-const { doAllTheThings } = require('./app');
+const { rabbits, breedRabbits } = require('./app');
 
-// This is a Jest unit test - see https://jestjs.io/docs/en/getting-started for more information
-test('doAllTheThings should be true', () => {
-    expect(doAllTheThings()).toBeTruthy();
-});
+
+test('original pair is born', () =>{
+    expect(breedRabbits(0)).toEqual(1)
+})
+
+test('original pair too young to breed pair', () => {
+    expect(breedRabbits(1)).toEqual(1)
+})
+
+test('original pair has a pair', () => {
+    expect(breedRabbits(2)).toEqual(2)
+})
+
+test('what the f', () => {
+    expect(breedRabbits(6)).toEqual(13)
+})
+
+test('what the f', () => {
+    expect(breedRabbits(11)).toEqual(144)
+})

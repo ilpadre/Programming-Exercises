@@ -50,7 +50,7 @@ Step 8
 Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.
 
 Step 9
-Make sure you can also handle multiple delimiters with length longer than one char.
+Make sure you can also handle multiple delimiters with length longer than one char: “//[**][%%]\n1**2%%3” == 6.
      */
     public class Tests
     {

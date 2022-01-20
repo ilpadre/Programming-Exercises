@@ -33,7 +33,8 @@ namespace Project
             Console.WriteLine(rabbitPopulation(10));
             Console.WriteLine(rabbitPopulation(11));
             Console.WriteLine(rabbitPopulation(12));
-
+            Console.WriteLine(rabbitPopulation(13));
+            Console.WriteLine(rabbitPopulation(60));
 
         }
 
