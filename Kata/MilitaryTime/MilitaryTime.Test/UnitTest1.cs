@@ -1,18 +1,23 @@
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using NUnit.Framework;
 
 namespace MilitaryTime.Test
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
+
+        [Test]
+        public void AmTestPassesThrough()
         {
+            string convertedTime = Program.TimeConversion("08:24:00AM");
+            Assert.AreEqual("08:24:00", convertedTime);
         }
 
         [Test]
-        public void Test1()
+        public void PMTestPasses()
         {
-            Assert.Pass();
+            string convertedTime = Program.TimeConversion("08:24:00PM");
+            Assert.AreEqual("20:24:00", convertedTime);
         }
     }
 }
