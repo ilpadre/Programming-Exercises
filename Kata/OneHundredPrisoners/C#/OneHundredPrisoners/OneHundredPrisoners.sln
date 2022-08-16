@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHundredPrisoners", "OneHundredPrisoners\OneHundredPrisoners.csproj", "{6BCECC39-533F-4569-8C51-ADA3A41C31F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHundredPrisoners.test", "OneHundredPrisoners.test\OneHundredPrisoners.test.csproj", "{FE0FC38E-869D-4EE4-A01F-BEC6CEFDCCF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BCECC39-533F-4569-8C51-ADA3A41C31F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCECC39-533F-4569-8C51-ADA3A41C31F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCECC39-533F-4569-8C51-ADA3A41C31F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCECC39-533F-4569-8C51-ADA3A41C31F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0FC38E-869D-4EE4-A01F-BEC6CEFDCCF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0FC38E-869D-4EE4-A01F-BEC6CEFDCCF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0FC38E-869D-4EE4-A01F-BEC6CEFDCCF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0FC38E-869D-4EE4-A01F-BEC6CEFDCCF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EA62A64-76C5-4FFF-85FF-C4A95F53B530}
+	EndGlobalSection
+EndGlobal
