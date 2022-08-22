@@ -25,11 +25,48 @@ namespace OneHundredPrisoners
                 }
             }
 
+            Console.WriteLine("***********************************");
+            Console.WriteLine();
+            Console.WriteLine("Results using cyclic strategy:");
+
             Console.WriteLine($"Successes: {numSuccesses}");
 
             Console.WriteLine($"Failures: {numFailures}");
 
             Console.WriteLine($"Success Rate = {(numSuccesses/(double)numTrials)*100.0}%");
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("***********************************");
+
+            numFailures = numSuccesses = 0;
+
+            numTrials = 1000000000;
+
+            for (int i = 1; i <= numTrials; i++)
+            {
+                PrisonersParole parole = new PrisonersParoleRandomStrategy(8);
+                if (parole.Play())
+                {
+                    numSuccesses++;
+                }
+                else
+                {
+                    numFailures++;
+                }
+            }
+
+            Console.WriteLine("***********************************");
+            Console.WriteLine();
+            Console.WriteLine("Results using random strategy:");
+            Console.WriteLine($"Successes: {numSuccesses}");
+
+            Console.WriteLine($"Failures: {numFailures}");
+            Console.WriteLine($"Success Rate = {(numSuccesses / (double)numTrials) * 100.0}%");
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("***********************************");
         }
 
 
