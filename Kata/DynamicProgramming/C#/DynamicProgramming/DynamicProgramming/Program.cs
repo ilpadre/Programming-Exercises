@@ -199,7 +199,7 @@ namespace DynamicProgramming
 
             // Compute minimum coins
             // required for all
-            // values from 1 to V
+            // values from 1 to amount
             for (int i = 1; i <= amount; i++)
             {
                 // Go through all coins
